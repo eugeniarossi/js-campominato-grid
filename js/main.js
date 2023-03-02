@@ -26,19 +26,24 @@ function myAddClass(htmlElement, className) {
  * Main
  */
 
-// Definisco delle variabili in cui salvo la board e il bottone
+// Definisco delle variabili in cui salvo board, button, select
 const board = document.querySelector('.board');
 const playButton = document.querySelector('.play-button');
 const selectInput = document.getElementById('level');
 
-// Definisco una variabile con il numero di elementi
+// Definisco una variabile per il numero di elementi
 let cellNumber = 0;
 
+// Aggiungo un evento onclick al play button
 playButton.addEventListener('click', function () {
+    // Svuoto la board
     board.innerHTML = '';
+    // Leggo il valore dell'input select
     const level = selectInput.value;
+    // Definisco una variabile livello per le classi css
     let levelClass;
 
+    // Stabilisco delle condizioni
     if (level === 'hard') {
         cellNumber = 100;
         levelClass = 'hard';
@@ -52,14 +57,17 @@ playButton.addEventListener('click', function () {
 
     // Creo un document fragment
     let fragment = document.createDocumentFragment();
-    // Creo gli elementi e li aggiungo al frammento
+    // Creo gli elementi
     for (let i = 1; i <= cellNumber; i++) {
         const createdElement = myCreateElement('div', 'cell', i);
+        // Assegno la classe livello
         myAddClass(createdElement, levelClass);
-        createdElement.addEventListener('click', function() {
+        createdElement.addEventListener('click', function () {
+            // Definisco il comportamento dell' elemento al click
             myAddClass(createdElement, 'cell-onclick');
             console.log(createdElement.innerText);
         });
+        // Aggiungo l'elemento al frammento
         myAppend(fragment, createdElement);
     }
     // Aggiungo il frammento alla board
