@@ -35,6 +35,7 @@ const selectInput = document.getElementById('level');
 let cellNumber = 0;
 
 playButton.addEventListener('click', function () {
+    board.innerHTML = '';
     const level = selectInput.value;
     let levelClass;
 
@@ -64,4 +65,3 @@ playButton.addEventListener('click', function () {
     // Aggiungo il frammento alla board
     myAppend(board, fragment);
 });
-
