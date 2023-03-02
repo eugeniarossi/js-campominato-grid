@@ -29,16 +29,32 @@ function myAddClass(htmlElement, className) {
 // Definisco delle variabili in cui salvo la board e il bottone
 const board = document.querySelector('.board');
 const playButton = document.querySelector('.play-button');
+const selectInput = document.getElementById('level');
 
 // Definisco una variabile con il numero di elementi
-let cellNumber = 100;
+let cellNumber = 0;
 
 playButton.addEventListener('click', function () {
+    const level = selectInput.value;
+    let levelClass;
+
+    if (level === 'hard') {
+        cellNumber = 100;
+        levelClass = 'hard';
+    } else if (level === 'medium') {
+        cellNumber = 81;
+        levelClass = 'medium';
+    } else {
+        cellNumber = 49;
+        levelClass = 'easy';
+    }
+
     // Creo un document fragment
-    const fragment = document.createDocumentFragment();
+    let fragment = document.createDocumentFragment();
     // Creo gli elementi e li aggiungo al frammento
     for (let i = 1; i <= cellNumber; i++) {
         const createdElement = myCreateElement('div', 'cell', i);
+        myAddClass(createdElement, levelClass);
         createdElement.addEventListener('click', function() {
             myAddClass(createdElement, 'cell-onclick');
             console.log(createdElement.innerText);

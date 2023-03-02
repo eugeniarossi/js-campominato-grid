@@ -29,6 +29,11 @@ header {
     padding: 1.25rem;
 }
 
+.controls {
+    display: flex;
+    gap: .625rem;
+}
+
 /*************
 MAIN
 *************/
@@ -55,25 +60,23 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% / 10);
-    height: calc(100% / 10);
 }
 
 .cell-onclick {
     background-color: #1892ff;
 }
 
-.cell.hard {
+.hard {
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
 
-.cell.medium {
+.medium {
     width: calc(100% / 9);
     height: calc(100% / 9);
 }
 
-.cell.easy {
+.easy {
     width: calc(100% / 7);
     height: calc(100% / 7);
 }

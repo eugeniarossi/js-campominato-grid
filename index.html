@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- header -->
     <header>
@@ -15,6 +17,14 @@
             <h1>Campo Minato</h1>
         </div>
         <div class="controls">
+            <div class="select-input">
+                <label for="level">Difficoltà:</label>
+                <select name="level" id="level">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
             <button class="play-button">Play</button>
         </div>
     </header>
@@ -33,4 +43,5 @@
     <!-- javascript -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
