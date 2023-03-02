@@ -27,14 +27,15 @@ const playButton = document.querySelector('.play-button');
 
 // Definisco una variabile con il numero di elementi
 let cellNumber = 100;
-// Creo un document fragment
-const fragment = document.createDocumentFragment();
 
-// Creo gli elementi e li aggiungo al frammento
-for (let i = 1; i <= cellNumber; i++) {
-    const createdElement = myCreateElement('div', 'cell', i);
-    myAppendChild(fragment, createdElement);
-}
-console.log(fragment);
-// Aggiungo il frammento alla board
-myAppendChild(board, fragment);
+playButton.addEventListener('click', function () {
+    // Creo un document fragment
+    const fragment = document.createDocumentFragment();
+    // Creo gli elementi e li aggiungo al frammento
+    for (let i = 1; i <= cellNumber; i++) {
+        const createdElement = myCreateElement('div', 'cell', i);
+        myAppendChild(fragment, createdElement);
+    }
+    // Aggiungo il frammento alla board
+    myAppendChild(board, fragment);
+});
