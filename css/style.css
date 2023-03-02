@@ -1,0 +1,83 @@
+/*************
+RESET
+*************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*************
+COMMON
+*************/
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*************
+HEADER 
+*************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+/*************
+MAIN
+*************/
+
+main {
+    flex-grow: 1;
+    background-color: #7fffd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 31.25rem;
+    height: 31.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* border: 1px solid black; */
+}
+
+.cell {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+/*
+.cell.hard {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cell.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.cell.easy {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+*/
+/*************
+FOOTER
+*************/
+
+footer {
+    padding: 1.25rem;
+}
