@@ -16,6 +16,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*************
@@ -28,6 +29,16 @@ header {
     align-items: center;
     padding: 1.25rem;
 }
+
+header .title {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 2.5rem;
+}
+
 
 .controls {
     display: flex;
