@@ -27,22 +27,45 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1.25rem .9375rem;
 }
 
 header .title {
     display: flex;
     align-items: center;
+    gap: .875rem;
 }
 
 header img {
     max-height: 2.5rem;
+    display: block;
 }
-
 
 .controls {
     display: flex;
-    gap: .625rem;
+    align-items: center;
+    gap: .3125rem;
+}
+
+.select-input {
+    display: flex;
+    align-items: center;
+    gap: .3125rem;
+}
+
+#level, .play-button {
+    background-color: #e9e9ed;
+    border: 1px solid #9494a2;
+    border-radius: .3125rem;
+    height: 1.375rem;
+}
+
+#level {
+    padding-right: 5rem;
+}
+
+.play-button {
+    padding: 0 1.5625rem;
 }
 
 /*************
@@ -63,7 +86,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .cell {
@@ -75,6 +98,10 @@ main {
 
 .cell-onclick {
     background-color: #1892ff;
+}
+
+.cell:hover {
+    color: white;
 }
 
 .hard {
@@ -97,5 +124,5 @@ FOOTER
 *************/
 
 footer {
-    padding: 1.25rem;
+    padding: 1.25rem .9375rem;
 }
