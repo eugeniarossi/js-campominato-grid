@@ -13,8 +13,8 @@ function myCreateElement(htmlElement, className, htmlValue) {
 }
 
 // Definisco una funzione per aggiungere elemento figlio a container
-function myAppendChild(containerElement, childElement) {
-    containerElement.append(childElement);
+function myAppend(containerElement, htmlElement) {
+    containerElement.append(htmlElement);
 }
 
 // Definisco una funzione per aggiungere una classe a un elemento html
@@ -59,9 +59,9 @@ playButton.addEventListener('click', function () {
             myAddClass(createdElement, 'cell-onclick');
             console.log(createdElement.innerText);
         });
-        myAppendChild(fragment, createdElement);
+        myAppend(fragment, createdElement);
     }
     // Aggiungo il frammento alla board
-    myAppendChild(board, fragment);
+    myAppend(board, fragment);
 });
 
