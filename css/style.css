@@ -58,6 +58,11 @@ main {
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
+
+.cell-onclick {
+    background-color: #1892ff;
+}
+
 /*
 .cell.hard {
     width: calc(100% / 10);

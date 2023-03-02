@@ -17,6 +17,11 @@ function myAppendChild(containerElement, childElement) {
     containerElement.append(childElement);
 }
 
+// Definisco una funzione per aggiungere una classe a un elemento html
+function myAddClass(htmlElement, className) {
+    htmlElement.classList.add(className);
+}
+
 /***********
  * Main
  */
@@ -34,8 +39,13 @@ playButton.addEventListener('click', function () {
     // Creo gli elementi e li aggiungo al frammento
     for (let i = 1; i <= cellNumber; i++) {
         const createdElement = myCreateElement('div', 'cell', i);
+        createdElement.addEventListener('click', function() {
+            myAddClass(createdElement, 'cell-onclick');
+            console.log(createdElement.innerText);
+        });
         myAppendChild(fragment, createdElement);
     }
     // Aggiungo il frammento alla board
     myAppendChild(board, fragment);
 });
+
