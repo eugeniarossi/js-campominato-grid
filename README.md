@@ -21,5 +21,16 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 6. Definisco la classe per colorare le celle e aggiungo un evento onclick alle celle
 
+## Bonus 
 
+7. Inserisco un input select nella pagina per scegliere il livello
 
+8. Definisco classi css per avere una diversa divisione della board per ogni livello di difficoltà
+
+9. Salvo l'input select in una variabile
+
+10.  Imposto la variabile cellNumber = 0 nello scope globale 
+
+11. All'interno dell'evento onclick del bottone play leggo il valore del select input e creo delle condizioni in cui assegno alla variabile cellNumber il valore relativo
+
+12. Definisco una variabile per la classe livello a cui assegno le diverse classi css a seconda dell'input select
