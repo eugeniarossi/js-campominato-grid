@@ -86,7 +86,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    border: 1px solid black;
+    margin: 0 auto;
 }
 
 .cell {
@@ -101,7 +101,9 @@ main {
 }
 
 .cell:hover {
+    box-sizing: border-box;
     color: white;
+    border: 1px solid white;
 }
 
 .hard {
